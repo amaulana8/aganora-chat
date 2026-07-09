@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="chat.simplex.app">
+    package="com.aganorachat.app">
 
   <uses-feature android:name="android.hardware.camera" />
 
@@ -44,7 +44,7 @@
       android:largeHeap="true"
       android:extractNativeLibs="${extract_native_libs}"
       android:supportsRtl="true"
-      android:theme="@style/Theme.SimpleX">
+      android:theme="@style/Theme.AganoraChat">
     <!--      android:localeConfig="@xml/locales_config"-->
 
     <!-- Main activity -->
@@ -56,7 +56,7 @@
         android:label="${app_name}"
         android:windowSoftInputMode="adjustResize"
         android:configChanges="uiMode"
-        android:theme="@style/Theme.SimpleX">
+        android:theme="@style/Theme.AganoraChat">
       <intent-filter>
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>

@@ -24,7 +24,7 @@ import java.util.UUID
 
 // Spec: spec/services/theme.md#DefaultTheme
 enum class DefaultTheme {
-  LIGHT, DARK, AGANORA_CHAT, BLACK;
+  LIGHT, DARK, SIMPLEX, BLACK;
 
   companion object {
     const val SYSTEM_THEME_NAME: String = "SYSTEM"
@@ -344,7 +344,7 @@ data class ThemeOverrides (
     val baseColors = when (base) {
       DefaultTheme.LIGHT -> LightColorPalette
       DefaultTheme.DARK -> DarkColorPalette
-      DefaultTheme.AGANORA_CHAT -> SimplexColorPalette
+      DefaultTheme.SIMPLEX -> SimplexColorPalette
       DefaultTheme.BLACK -> BlackColorPalette
     }
     return baseColors.copy(
@@ -361,7 +361,7 @@ data class ThemeOverrides (
     val baseColors = when (base) {
       DefaultTheme.LIGHT -> LightColorPaletteApp
       DefaultTheme.DARK -> DarkColorPaletteApp
-      DefaultTheme.AGANORA_CHAT -> SimplexColorPaletteApp
+      DefaultTheme.SIMPLEX -> SimplexColorPaletteApp
       DefaultTheme.BLACK -> BlackColorPaletteApp
     }
 
@@ -521,13 +521,13 @@ data class ThemeModeOverride (
     val c = when (base) {
       DefaultTheme.LIGHT -> LightColorPalette
       DefaultTheme.DARK -> DarkColorPalette
-      DefaultTheme.AGANORA_CHAT -> SimplexColorPalette
+      DefaultTheme.SIMPLEX -> SimplexColorPalette
       DefaultTheme.BLACK -> BlackColorPalette
     }
     val ac = when (base) {
       DefaultTheme.LIGHT -> LightColorPaletteApp
       DefaultTheme.DARK -> DarkColorPaletteApp
-      DefaultTheme.AGANORA_CHAT -> SimplexColorPaletteApp
+      DefaultTheme.SIMPLEX -> SimplexColorPaletteApp
       DefaultTheme.BLACK -> BlackColorPaletteApp
     }
     val w = when (val wallpaperType = WallpaperType.from(wallpaper)) {
@@ -599,7 +599,7 @@ data class ThemeModeOverride (
 fun Modifier.themedBackground(baseTheme: DefaultTheme = CurrentColors.value.base, bgLayerSize: MutableState<IntSize>?, bgLayer: GraphicsLayer?/*, shape: Shape = RectangleShape*/): Modifier {
   return drawBehind {
     copyBackgroundToAppBar(bgLayerSize, bgLayer) {
-      if (baseTheme == DefaultTheme.AGANORA_CHAT) {
+      if (baseTheme == DefaultTheme.SIMPLEX) {
         drawRect(brush = themedBackgroundBrush())
       } else {
         drawRect(CurrentColors.value.colors.background)

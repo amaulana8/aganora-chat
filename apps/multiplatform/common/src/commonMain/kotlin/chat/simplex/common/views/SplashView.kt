@@ -13,12 +13,12 @@ fun SplashView(nonTransparent: Boolean = false) {
     color = if (nonTransparent) MaterialTheme.colors.background.copy(1f) else MaterialTheme.colors.background,
     contentColor = LocalContentColor.current
   ) {
-//    Image(
-//      painter = painterResource(MR.images.logo),
-//      contentDescription = "Simplex Icon",
-//      modifier = Modifier
-//        .height(230.dp)
-//        .align(Alignment.Center)
-//    )
+    Image(
+      painter = painterResource(MR.images.logo),
+      contentDescription = "Aganora Icon",
+      modifier = Modifier
+        .height(230.dp)
+        .align(Alignment.Center)
+    )
   }
 }
