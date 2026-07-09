@@ -1158,8 +1158,9 @@ object AppearanceScope {
   private fun DarkModeThemeSelector(state: State<String?>, onSelected: (String) -> Unit) {
     val values by remember {
       val darkThemes = ArrayList<Pair<String, String>>()
+      val simplexLabel = generalGetString(MR.strings.theme_simplex)
       darkThemes.add(DefaultTheme.DARK.themeName to generalGetString(MR.strings.theme_dark))
-      darkThemes.add(DefaultTheme.SIMPLEX.themeName to generalGetString(MR.strings.theme_simplex))
+      darkThemes.add(DefaultTheme.SIMPLEX.themeName to simplexLabel)
       darkThemes.add(DefaultTheme.BLACK.themeName to generalGetString(MR.strings.theme_black))
       mutableStateOf(darkThemes.toList())
     }
