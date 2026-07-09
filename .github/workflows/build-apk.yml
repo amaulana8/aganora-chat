@@ -27,8 +27,23 @@ jobs:
       - name: Grant execute permission
         run: chmod +x gradlew
 
-      - name: Build native libraries for Android
-        run: ./gradlew common:cmakeBuild -PcrossCompile
+      - name: Download prebuilt libs from upstream release
+        run: |
+          mkdir -p common/src/commonMain/cpp/android/libs/arm64-v8a
+          mkdir -p common/src/commonMain/cpp/android/libs/armeabi-v7a
+          mkdir -p common/src/commonMain/cpp/android/libs/x86_64
+          mkdir -p common/src/commonMain/cpp/android/libs/x86
+
+          echo "Downloading upstream APK for arm64..."
+          curl -sL -o upstream.apk \
+            "https://github.com/simplex-chat/simplex-chat/releases/download/v6.5.6/simplex-aarch64.apk"
+
+          echo "Extracting .so from APK..."
+          unzip -o -j upstream.apk "lib/arm64-v8a/libsimplex.so" -d common/src/commonMain/cpp/android/libs/arm64-v8a/
+          unzip -o -j upstream.apk "lib/arm64-v8a/libsupport.so" -d common/src/commonMain/cpp/android/libs/arm64-v8a/
+          unzip -o -j upstream.apk "lib/arm64-v8a/libapp-lib.so" -d common/src/commonMain/cpp/android/libs/arm64-v8a/ || true
+
+          ls -la common/src/commonMain/cpp/android/libs/arm64-v8a/
 
       - name: Build Android APK Debug
         run: ./gradlew assembleDebug
