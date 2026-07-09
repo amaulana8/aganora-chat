@@ -27,11 +27,14 @@ jobs:
       - name: Grant execute permission
         run: chmod +x gradlew
 
-      - name: Build Android APK Release
-        run: ./gradlew assembleRelease
+      - name: Build native libraries for Android
+        run: ./gradlew common:cmakeBuild -PcrossCompile
+
+      - name: Build Android APK Debug
+        run: ./gradlew assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: aganora-chat-apk
-          path: android/build/outputs/apk/release/*.apk
+          path: android/build/outputs/apk/debug/*.apk
