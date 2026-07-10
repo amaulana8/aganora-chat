@@ -8,7 +8,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import chat.simplex.res.MR
-import org.jetbrains.compose.resources.painterResource
+import dev.icerock.moko.resources.compose.painterResource
 
 @Composable
 fun SplashView(nonTransparent: Boolean = false) {
