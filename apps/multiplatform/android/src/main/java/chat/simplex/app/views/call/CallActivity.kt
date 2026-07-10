@@ -32,7 +32,7 @@ import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Lifecycle
 import chat.simplex.app.*
-import chat.simplex.app.R
+import com.aganorachat.app.R
 import chat.simplex.app.TAG
 import chat.simplex.app.model.NtfManager
 import chat.simplex.app.model.NtfManager.AcceptCallAction

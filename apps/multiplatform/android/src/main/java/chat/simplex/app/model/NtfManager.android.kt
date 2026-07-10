@@ -13,6 +13,7 @@ import android.view.Display
 import androidx.compose.ui.graphics.asAndroidBitmap
 import androidx.core.app.*
 import chat.simplex.app.*
+import com.aganorachat.app.R
 import chat.simplex.app.TAG
 import chat.simplex.app.views.call.CallActivity
 import chat.simplex.app.views.call.getKeyguardManager
