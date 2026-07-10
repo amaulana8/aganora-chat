@@ -52,4 +52,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: aganora-chat-apk
-          path: android/build/outputs/apk/debug/*.apk
+          path: apps/multiplatform/android/build/outputs/apk/debug/*.apk
