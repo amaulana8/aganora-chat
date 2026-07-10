@@ -340,7 +340,7 @@ fun userPickerAlpha(): Float {
     DefaultTheme.LIGHT -> 0.05f
     DefaultTheme.DARK -> 0.05f
     DefaultTheme.BLACK -> 0.075f
-    DefaultTheme.SIMPLEX -> 0.035f
+    DefaultTheme.AGANORA_CHAT -> 0.035f
   }
 }
 

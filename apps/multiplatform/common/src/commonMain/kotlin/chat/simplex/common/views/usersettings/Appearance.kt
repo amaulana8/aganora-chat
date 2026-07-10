@@ -1160,7 +1160,7 @@ object AppearanceScope {
       val darkThemes = ArrayList<Pair<String, String>>()
       val simplexLabel = generalGetString(MR.strings.theme_simplex)
       darkThemes.add(DefaultTheme.DARK.themeName to generalGetString(MR.strings.theme_dark))
-      darkThemes.add(DefaultTheme.SIMPLEX.themeName to simplexLabel)
+      darkThemes.add(DefaultTheme.AGANORA_CHAT.themeName to simplexLabel)
       darkThemes.add(DefaultTheme.BLACK.themeName to generalGetString(MR.strings.theme_black))
       mutableStateOf(darkThemes.toList())
     }

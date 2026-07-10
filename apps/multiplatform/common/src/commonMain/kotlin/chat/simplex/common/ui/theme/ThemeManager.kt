@@ -22,9 +22,9 @@ object ThemeManager {
 
   private fun systemDarkThemeColors(): Pair<Colors, DefaultTheme> = when (appPrefs.systemDarkTheme.get()) {
     DefaultTheme.DARK.themeName -> DarkColorPalette to DefaultTheme.DARK
-    DefaultTheme.SIMPLEX.themeName -> SimplexColorPalette to DefaultTheme.SIMPLEX
+    DefaultTheme.AGANORA_CHAT.themeName -> SimplexColorPalette to DefaultTheme.AGANORA_CHAT
     DefaultTheme.BLACK.themeName -> BlackColorPalette to DefaultTheme.BLACK
-    else -> SimplexColorPalette to DefaultTheme.SIMPLEX
+    else -> SimplexColorPalette to DefaultTheme.AGANORA_CHAT
   }
 
   private fun nonSystemThemeName(): String {
@@ -62,7 +62,7 @@ object ThemeManager {
     val baseTheme = when (nonSystemThemeName) {
       DefaultTheme.LIGHT.themeName -> ActiveTheme(DefaultTheme.LIGHT.themeName, DefaultTheme.LIGHT, LightColorPalette, LightColorPaletteApp, AppWallpaper(type = PresetWallpaper.SCHOOL.toType(DefaultTheme.LIGHT)))
       DefaultTheme.DARK.themeName -> ActiveTheme(DefaultTheme.DARK.themeName, DefaultTheme.DARK, DarkColorPalette, DarkColorPaletteApp, AppWallpaper(type = PresetWallpaper.SCHOOL.toType(DefaultTheme.DARK)))
-      DefaultTheme.SIMPLEX.themeName -> ActiveTheme(DefaultTheme.SIMPLEX.themeName, DefaultTheme.SIMPLEX, SimplexColorPalette, SimplexColorPaletteApp, AppWallpaper(type = PresetWallpaper.SCHOOL.toType(DefaultTheme.SIMPLEX)))
+      DefaultTheme.AGANORA_CHAT.themeName -> ActiveTheme(DefaultTheme.AGANORA_CHAT.themeName, DefaultTheme.AGANORA_CHAT, SimplexColorPalette, SimplexColorPaletteApp, AppWallpaper(type = PresetWallpaper.SCHOOL.toType(DefaultTheme.AGANORA_CHAT)))
       DefaultTheme.BLACK.themeName -> ActiveTheme(DefaultTheme.BLACK.themeName, DefaultTheme.BLACK, BlackColorPalette, BlackColorPaletteApp, AppWallpaper(type = PresetWallpaper.SCHOOL.toType(DefaultTheme.BLACK)))
       else -> ActiveTheme(DefaultTheme.LIGHT.themeName, DefaultTheme.LIGHT, LightColorPalette, LightColorPaletteApp, AppWallpaper(type = PresetWallpaper.SCHOOL.toType(DefaultTheme.LIGHT)))
     }
