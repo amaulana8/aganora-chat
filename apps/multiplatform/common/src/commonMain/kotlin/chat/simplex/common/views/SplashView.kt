@@ -9,6 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import chat.simplex.res.MR
 import dev.icerock.moko.resources.compose.painterResource
+import androidx.compose.foundation.layout.Box
 
 @Composable
 fun SplashView(nonTransparent: Boolean = false) {
@@ -18,12 +19,12 @@ fun SplashView(nonTransparent: Boolean = false) {
     color = if (nonTransparent) MaterialTheme.colors.background.copy(1f) else MaterialTheme.colors.background,
     contentColor = LocalContentColor.current
   ) {
-    Image(
-      painter = painterResource(MR.images.logo),
-      contentDescription = "Aganora Icon",
-      modifier = Modifier
-        .height(230.dp)
-        .align(Alignment.Center)
-    )
+    Box(contentAlignment = Alignment.Center) {
+      Image(
+        painter = painterResource(MR.images.logo),
+        contentDescription = "Aganora Icon",
+        modifier = Modifier.height(230.dp)
+      )
+    }
   }
 }
