@@ -11,6 +11,7 @@ import chat.simplex.common.views.helpers.DatabaseUtils
 import kotlinx.coroutines.*
 import java.util.Date
 import java.util.concurrent.TimeUnit
+import com.aganorachat.app.BuildConfig
 
 object MessagesFetcherWorker {
   private const val UNIQUE_WORK_TAG = BuildConfig.APPLICATION_ID + ".UNIQUE_MESSAGES_FETCHER"

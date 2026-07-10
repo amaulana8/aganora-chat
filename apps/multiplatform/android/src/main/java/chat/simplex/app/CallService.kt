@@ -18,6 +18,7 @@ import chat.simplex.common.platform.*
 import chat.simplex.common.views.helpers.*
 import chat.simplex.res.MR
 import kotlinx.datetime.Instant
+import com.aganorachat.app.R
 
 class CallService: Service() {
   private var wakeLock: PowerManager.WakeLock? = null

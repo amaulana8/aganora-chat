@@ -33,6 +33,8 @@ import chat.simplex.res.MR
 import dev.icerock.moko.resources.compose.painterResource
 import dev.icerock.moko.resources.compose.stringResource
 import kotlin.system.exitProcess
+import com.aganorachat.app.R
+import com.aganorachat.app.BuildConfig
 
 // based on:
 // https://robertohuertas.com/2019/06/29/android_foreground_services/

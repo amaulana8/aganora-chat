@@ -35,6 +35,7 @@ import kotlinx.coroutines.*
 import java.io.*
 import java.util.*
 import java.util.concurrent.TimeUnit
+import com.aganorachat.app.BuildConfig
 
 const val TAG = "SIMPLEX"
 
