@@ -4327,7 +4327,7 @@ data class ServerOperatorInfo(
 val operatorsInfo: Map<OperatorTag, ServerOperatorInfo> = mapOf(
   OperatorTag.SimpleX to ServerOperatorInfo(
     description = listOf(
-      "SimpleX Chat is the first communication network that has no user profile IDs of any kind, not even random numbers or keys that identify the users.",
+      "Aganora Chat is the first communication network that has no user profile IDs of any kind, not even random numbers or keys that identify the users.",
       "SimpleX Chat Ltd develops the communication software for SimpleX network."
     ),
     website = "https://simplex.chat",
